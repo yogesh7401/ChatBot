@@ -4,7 +4,7 @@ export const runtime = "edge";
 
 const llmService = createLLMService({
   openaiApiKey: process.env.CHATGPT_API_KEY,
-  actions: ["chat"],
+  actions: ["chat", "embed"],
 });
 
 export async function POST(request: Request) {

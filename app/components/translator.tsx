@@ -58,7 +58,7 @@ export default function Translator() {
           ref={messagesEndRef}
           className="border-2 rounded-md h-full overflow-scroll overflow-x-hidden"
         >
-          <div className="border rounded-md top-2 left-2 shadow-lg pb-3 mb-3 absolute p-1 sm:p-3 md:p-5 bg-white">
+          <div className="border rounded-md top-2 left-2 shadow-lg pb-3  mb-3 absolute p-2 sm:p-3 md:p-5 bg-white">
             <div className="flex gap-x-3 ml-auto">
               <div className="my-auto font-bold">To language</div>
               <input

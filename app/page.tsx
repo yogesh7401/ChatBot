@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Chat from "./components/chat";
 import Document from "./components/document";
+import Translator from "./components/translator";
 
 export default function Home() {
   const [tab, setTab] = useState("chat");
@@ -31,8 +32,22 @@ export default function Home() {
           >
             Document Q&A
           </p>
+          <p
+            onClick={() => setTab("translator")}
+            className={`p-2 px-5 cursor-pointer ${
+              tab === "translator" ? "font-bold" : "font-semibold text-gray-400"
+            } `}
+          >
+            Translator
+          </p>
         </div>
-        {tab === "chat" ? <Chat /> : <Document />}
+        {tab === "chat" ? (
+          <Chat />
+        ) : tab === "document" ? (
+          <Document />
+        ) : (
+          <Translator />
+        )}
       </div>
     </div>
   );
